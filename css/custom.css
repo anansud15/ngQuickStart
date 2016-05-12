@@ -1,0 +1,1298 @@
+@import url(font-awesome.css);
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'roboto_regular';
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+.fa {
+    font-family: 'font_awesome';
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#content {
+    padding-bottom: 50px;
+    /* Height of the footer element */
+}
+
+
+/* Login Page */
+
+.logo {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.logiBg {
+    background: url(../images/bg_login.png) no-repeat bottom;
+    background-size: cover;
+}
+
+.loginContainer {
+    height: 100%;
+}
+
+.loginPage h2 {
+    font-family: 'roboto_light';
+    font-size: 32px;
+    padding-bottom: 10px;
+    color: #6D6D6D;
+}
+
+.loginPage p {
+    font-size: 14px;
+    color: #7B7979;
+}
+
+.loginPage h3 {
+    font-family: 'roboto_light';
+    font-size: 32px;
+    padding-bottom: 10px;
+    color: #0091cf;
+    text-transform: uppercase;
+}
+
+.left-inner-addon {
+    position: relative;
+}
+
+.left-inner-addon input {
+    padding-left: 30px;
+}
+
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    font-family: 'font_awesome';
+    color: #999;
+}
+
+.loginPage .checkbox label {
+    margin-top: 8px;
+}
+
+.loginPage .checkbox button {
+    padding: 6px 24px;
+    font-family: 'roboto_regular';
+    text-transform: uppercase;
+}
+
+.loginPage .form-group {
+    margin-bottom: 20px;
+}
+
+.forgetPassword {
+    text-align: center;
+}
+
+.forgetPassword a {
+    margin-top: 30px;
+    display: block;
+    color: #ff6600;
+    outline: 0;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 7px 0;
+    background: #2c3336;
+    color: #7B7B7B;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.copyright {
+    padding-top: 5px;
+}
+
+.poweredby label {
+    padding-right: 10px;
+}
+
+#forgetPasswordModal .modal-dialog {
+    width: 450px;
+}
+
+
+/* Inner Page */
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-default {
+    background-color: #005485;
+    border: 0;
+    height: 54px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    padding: 3px 15px 1px;
+}
+
+.navbar-brand img {
+    width: 90%;
+}
+
+.navActive {
+    border-bottom: 4px solid #f5ea16;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+}
+
+.userSetting img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    vertical-align: middle;
+    behavior: url(css/PIE.htc);
+    height: 44px;
+    margin-top: 3px;
+}
+
+.userSetting a {
+    padding: 0 15px !important;
+}
+
+.userSetting .dropdown-menu {
+    border-radius: 0;
+}
+
+.userSetting .dropdown-menu a {
+    padding: 10px !important;
+    border-bottom: 1px solid #ccc;
+}
+
+.userSetting .dropdown-menu li:last-child a {
+    border-bottom: 0px solid #ccc;
+}
+
+.navbar-default .navbar-nav>.open>a {
+    background: none !important;
+}
+
+.leftPanel {
+    background: #fff;
+    box-shadow: 0px 0px 2px #ccc;
+    padding: 15px;
+}
+
+.sidebar {
+    position: absolute;
+    
+    left: 20px;
+    top: 80px;
+    z-index: 100;
+    min-height: 960%;
+    background: #fff;
+}
+
+.filterSearch input {
+    border-radius: 0;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+
+.right-inner-addon input {
+    padding-right: 30px;
+}
+
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 8px 12px;
+    pointer-events: none;
+    font-family: 'font_awesome';
+    color: #999;
+    font-size: 18px;
+}
+
+.filter {
+    margin-top: 20px;
+}
+
+.glyphicon-chevron-down,
+.glyphicon-chevron-up {
+    color: #999;
+}
+
+.filter .panel-body {
+    padding: 5px 10px;
+}
+
+.filter .panel-default {
+    border: 0;
+}
+
+.filter .panel-default>.panel-heading {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    border: 0;
+    font-family: 'roboto_bold';
+}
+
+.filter .checkbox {
+    margin-bottom: 12px;
+}
+
+.filter .checkbox label {
+    color: #212121;
+}
+
+.filter .panel-title a {
+    display: block;
+}
+
+.panel-title {
+    font-size: 15px;
+    color: #212121;
+    text-transform: uppercase;
+}
+
+.filter .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-bottom: 1px solid #ddd;
+}
+
+.filter .panel-title a:hover,
+.filter .panel-title a:focus {
+    text-decoration: none;
+}
+
+.filter .panel-heading {
+    padding: 10px;
+}
+
+.filter a.more {
+    color: #009dff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.filter a.more i {
+    font-family: 'font_awesome';
+    font-size: 12px;
+    padding-right: 7px;
+}
+
+.tags-view {
+    background-color: #dee0e0;
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+
+.tags-view ul {
+    margin: 0;
+    padding: 0;
+}
+
+.tags-view li {
+    float: left;
+    background-color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    font-family: 'roboto_bold';
+}
+
+.tags-view li a i {
+    font-family: 'font_awesome';
+    color: red;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.viewChanger a {
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: #fff;
+    padding: 3px 4px 2px 6px;
+    display: block;
+    float: left;
+    color: #999;
+}
+
+.viewChanger a.active {
+    color: #005485;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    border-top: 3px solid #fff;
+    position: relative;
+}
+
+.card.new {
+    border-top: 3px solid #00a6d9;
+}
+
+.card.recent {
+    border-top: 3px solid #00a6d9;
+}
+
+.card img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    vertical-align: middle;
+    behavior: url(css/PIE.htc);
+    height: 44px;
+}
+
+.cardHeader {
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.cardHeaderLeft,
+.cardHeaderRight {
+    float: left;
+}
+
+.cardHeaderLeft {
+    width: 25%;
+}
+
+.cardHeaderRight {
+    width: 75%;
+}
+
+.cardHeader .name {
+    font-size: 14px;
+    font-family: 'roboto_bold';
+}
+
+.cardHeader .name a {
+    color: #333;
+}
+
+.viewProfileLink {
+    padding-left: 54px;
+    font-size: 13px;
+}
+
+.cardHeader .idPlace {
+    font-size: 12px;
+}
+
+.cardBottom {
+    margin-top: 10px;
+}
+
+.cardBottom .title {
+    font-size: 13px;
+    color: #999;
+}
+
+.cardBottom .subtext {
+    font-size: 13px;
+    color: #333;
+    font-family: 'roboto_bold';
+}
+
+.cardBottom .jobTitle,
+.cardBottom .jobType {
+    float: left;
+}
+
+.cardBottom .jobTitle {
+    width: 50%;
+}
+
+.cardBottom .jobType,
+.cardBottom .status {
+    width: 25%;
+}
+
+.cardBottom .status {
+    float: right;
+    text-align: right;
+}
+
+.jobStatusConut {
+    width: 44px;
+    height: 44px;
+    float: right;
+    margin-top: -25px;
+}
+
+.cardBottom .status .subtext {
+    color: #999;
+    font-size: 13px;
+    font-family: 'roboto_regular';
+    padding-top: 2px;
+}
+
+.cardOptions {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.cardOptions a {
+    color: #333;
+    font-size: 16px;
+}
+
+.cardOptions.btn-group.open .dropdown-toggle {
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .125);
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .125);
+}
+
+.card .dropdown-menu {
+    background-color: #f5f5f5;
+    border-radius: 0;
+}
+
+.card .dropdown-menu>li>a {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.card .dropdown-menu>li:last-child>a {
+    border-bottom: 0;
+}
+
+.fullWidth {
+    width: 100%;
+    background: #dee0e0;
+    padding: 8px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.marBotNull {
+    margin-bottom: 0;
+}
+
+.applicantHeader .title {
+    font-size: 14px;
+    color: #999;
+}
+
+.applicantHeader .subtext {
+    font-size: 15px;
+    color: #444;
+    font-family: 'roboto_regular';
+    font-weight: bold;
+}
+
+.expireDays {
+    background-color: #f5ea16;
+    padding: 0px 10px 3px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'roboto_bold';
+    text-align: center;
+}
+
+.expireDays span {
+    font-size: 22px;
+    font-family: 'roboto_regular';
+}
+
+.expireDays .days {
+    font-size: 13px;
+}
+
+.applicantImage {
+    float: left;
+}
+
+.applicantImage img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+    vertical-align: middle;
+    behavior: url(css/PIE.htc);
+    height: 44px;
+    margin-right: 10px;
+}
+
+.applicantName {
+    text-transform: uppercase;
+    font-size: 17px !important;
+}
+
+.application {
+    margin-top: 3em;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.application::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 138px;
+    height: 95%;
+    width: 1px;
+    background: #ddd;
+    z-index: -1;
+}
+
+.applicationSteps .step-col-1 {
+    float: left;
+    width: 9%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.applicationSteps .step-col-2 {
+    float: left;
+    width: 6%;
+    margin-top: 12px;
+    position: relative;
+}
+
+.applicationSteps .step-col-2::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    height: 1px;
+    width: 120px;
+    background: #ddd;
+    z-index: -1;
+}
+
+.applicationSteps .step-col-3 {
+    float: left;
+    width: 85%;
+}
+
+.processDate .date {
+    font-size: 24px;
+    font-family: 'roboto_light';
+    text-align: center;
+}
+
+.processDate .month {
+    font-size: 14px;
+    font-family: 'roboto_light';
+}
+
+.processIndicator {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.processIndicator.open {
+    border-color: #fc9700;
+}
+
+.processIndicator.done {
+    border-color: #009994;
+}
+
+.process ul {
+    float: left;
+    padding: 0;
+}
+
+.process ul li {
+    color: #AAAAAA;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+
+.process ul li input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.process ul li label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0px 25px 25px 40px;
+    margin: 5px auto;
+    height: 20px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    font-family: 'roboto_regular';
+    color: #333;
+}
+
+.process ul li:hover label {
+    color: #333;
+}
+
+.process ul li .check {
+    display: block;
+    position: absolute;
+    border: 3px solid #cccccc;
+    content: '';
+    border-radius: 100%;
+    height: 27px;
+    width: 27px;
+    top: 2px;
+    left: 0px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+
+.process ul li:hover .check {
+    border: 3px solid #cccccc;
+}
+
+.process ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 3px;
+    left: 3px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+    background: #cccccc;
+}
+
+.process input[type=radio]:checked ~ .check {
+    border: 3px solid #005485;
+}
+
+.process input[type=radio]:checked ~ .check::before {
+    background: #005485;
+}
+
+.process input[type=radio]:checked ~ label {
+    color: #000;
+}
+
+.step-col-3 .panel-heading {
+    background-color: #fff;
+    border: 0;
+    padding: 20px 0 20px 15px;
+    font-size: 17px;
+    font-family: 'roboto_bold';
+    position: relative;
+}
+
+.step-col-3 .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0;
+}
+
+.step-col-3 .panel-default {
+    box-shadow: 1px 1px 4px #ccc;
+    border: 0;
+}
+
+.step-col-3 h4 {
+    font-size: 17px;
+    text-transform: inherit;
+    font-family: 'roboto_regular';
+}
+
+.step-col-3 .panel-title>a {
+    display: block;
+}
+
+.processActionBn {
+    margin: 0 auto;
+    text-align: center;
+    float: inherit;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    padding-top: 18px;
+}
+
+.processActionBn a {
+    font-size: 16px;
+    font-family: 'roboto_bold';
+    color: #999;
+    margin-left: 15px;
+}
+
+.processActionBn a.btn {
+    background-color: #3bb3b1;
+    color: #fff;
+    position: relative;
+    padding: 4px 15px 5px 15px;
+    margin-top: -5px;
+}
+
+.processActionBn a.btn::after {
+    content: "|";
+    position: absolute;
+    right: -15px;
+    color: #D2D2D2;
+    font-size: 35px;
+    font-family: 'roboto_thin';
+    top: -11px;
+}
+
+.processActionBn a.cancel {
+    padding-top: 10px;
+}
+
+#interview .heading {
+    font-size: 14px;
+    color: #555;
+    padding-bottom: 8px;
+    font-family: 'roboto_bold';
+}
+
+#interview .title {
+    font-size: 14px;
+    color: #888888;
+    padding-bottom: 2px;
+}
+
+#interview .subtext {
+    font-size: 15px;
+    color: #333;
+    font-family: 'roboto_bold';
+}
+
+.interviewRows {
+    margin-bottom: 26px;
+}
+
+.applicationSteps .panel-group.disable h4 {
+    color: #999;
+}
+
+.applicationSteps .panel-group.disable h4 a {
+    pointer-events: none;
+    cursor: default;
+}
+
+.reviewContent,
+.verbalContent,
+.interviewContent {
+    display: none;
+}
+
+.shortContent.text {
+    font-size: 16px;
+    color: #999;
+    padding-top: 10px;
+    font-family: 'roboto_regular';
+}
+
+.SC_Right {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    text-align: right;
+}
+
+.applicationProcessOption {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.applicationProcessOption a {
+    color: #333;
+}
+
+.applicationProcessOption.btn-group.open .dropdown-toggle {
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .125);
+}
+
+.applicationProcessOption .dropdown-menu>li>a {
+    font-family: 'roboto_regular';
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.applicationProcessOption .dropdown-menu>li:last-child>a {
+    border-bottom: 0;
+}
+
+.applicationProcessOption .glyphicon {
+    color: #787878;
+}
+
+.applicationProcessOption a.disable {
+    pointer-events: none;
+    cursor: default;
+}
+
+.applicationProcessOption a.disable .glyphicon {
+    color: #aaa;
+}
+
+.contentLoader {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+.fixed2 {
+    position: fixed;
+    top: 69px;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+.fixed3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    padding-left: 28%;
+}
+
+.fixed4 {
+    position: fixed !important;
+    top: 64px !important;
+    left: 0;
+    z-index: 500;
+}
+
+.dropdown-menu:before {
+    position: absolute;
+    top: -7px;
+    right: 29px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+}
+
+.dropdown-menu:after {
+    position: absolute;
+    top: -6px;
+    right: 30px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: '';
+}
+
+.cardHeader .dropdown-menu:before {
+    right: 2px;
+}
+
+.cardHeader .dropdown-menu:after {
+    right: 3px;
+}
+
+.toggleMenu {
+    width: 40px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #fff;
+    position: fixed;
+    top: 64px;
+    left: 0px;
+    text-align: center;
+    line-height: 40px;
+    display: none;
+    z-index: 500;
+}
+
+.toggleMenu i {
+    font-family: 'font_awesome';
+    font-size: 18px;
+}
+
+.sidebar.toggled {
+    left: -32%;
+}
+
+#menu-toggle {
+    display: block;
+}
+.userDetails {
+	background-color: #fff;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+.backBtn {
+    float: left;
+    margin: 10px 25px 0 10px;
+}
+.backBtn i.fa {
+    font-size: 30px;  
+    color: #333;
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .sidebar {
+    width: 50%;
+        left: -50%;
+        top: 64px;
+    }
+    .contantArea, .contantArea .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .expireDays {
+        position: absolute;
+        z-index: 100;
+        top: -120px;
+        right: 0;
+        font-size: 13px;
+    }    
+    .expireDays .days {
+        font-size: 12px;
+    }
+    .applicantHeader .subtext {
+        font-size: 13px;
+    }
+    .backBtn {
+        margin: 10px 10px 0 -26px;
+    }
+    .process ul li, .process ul li label {
+        height: auto;
+    }
+     .process ul li label {
+       padding: 0 5px 5px 40px;
+    }
+    .applicationSteps .step-col-1 {
+        width: 15%;
+    }
+    .applicationSteps .step-col-2 {
+        width: 15%;
+    }
+    .applicationSteps .step-col-3 {
+        width: 70%;
+    }
+    .processIndicator {
+        width: 32px;
+        height: 32px;
+    }
+    .application::before {
+        left: 65px !important;
+    }
+    .applicationSteps .step-col-2::after {
+        top: 17px;
+    }
+    .SC_Right {
+        position: relative;
+        text-align: left;
+        left: 3px;
+        right: 0;
+        top: 0;
+    }
+     .sidebar {
+        width: 67%;
+        left: -67%;
+        top: 64px;
+        min-height: 96%;
+        background: #fff;
+        display: block;
+    }
+    .toggleMenu {
+        display: block;
+    }
+    .sidebar.toggled {
+        left: 0;
+    }
+    .tags-view li {
+        font-size: 12px;
+        margin-right: 2px;
+        padding: 5px 4px;
+    }
+    .tags-view li a i {
+        margin-left: 6px;
+    }
+    .viewChanger a {
+        margin-left: 3px;
+    }
+    footer {
+        height: 52px;
+    }
+    .cardHeaderLeft {
+        width: 17%;
+    }
+}
+    
+@media only screen and (min-width: 480px) {
+    .sidebar {
+        width: 50%;
+        left: -50%;
+        top: 64px;
+        min-height: 96%;
+        background: #fff;
+        display: block;
+    }
+    .leftPanel {
+        box-shadow: 0px 0px 0px #fff;
+        padding: 15px 0;
+    }
+    .toggleMenu {
+        display: block;
+    }
+    .sidebar.toggled {
+        left: 0%;
+    }
+    .cardHeaderLeft {
+        width: 15%;
+    }
+    .navbar-default .navbar-collapse {
+        border: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 501;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        min-height: 44px;
+    }
+    .navbar-default {
+        height: 44px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+        font-size: 15px;
+    }
+    .navActive {
+        border-left: 4px solid #f5ea16;
+        border-bottom: 0;
+    }
+    .navbar-brand {
+        height: 44px;
+    }
+    .navbar-brand img {
+        width: 74%;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #005485;
+    }
+    .navbar-toggle {
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+    .navbar-default .navbar-collapse {
+        background-color: #005485;
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+    }
+    .navbar-default .navbar-toggle:focus,
+    .navbar-default .navbar-toggle:hover {
+        background-color: #005485;
+        border-color: #005485;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-toggle .icon-bar {
+        height: 3px;
+    }
+    .fixed3 {
+        padding-left: 3%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .nav>li>a {
+        padding: 10px 12px;
+    }
+    .navbar-default,
+    .navbar {
+        height: 44px;
+        min-height: 44px;
+    }
+    .navbar-brand img {
+        width: 76%;
+    }
+    .userSetting img {
+        height: 39px;
+    }
+    .sidebar {
+        width: 32%;
+        left: -32%;
+        top: 64px;
+        min-height: 96%;
+        background: #fff;
+    }
+    .leftPanel {
+        box-shadow: 0px 0px 0px #fff;
+        padding: 15px 0;
+    }
+    .toggleMenu {
+        display: block;
+    }
+    .sidebar.toggled {
+        left: 0%;
+    }
+    .cardHeaderLeft {
+        width: 18%;
+    }
+    .fixed3 {
+        top: 18px;
+        padding-left: 5%;
+        padding-right: 4%;
+    }
+    .loginPage h3 {
+        margin-top: 40px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 992px) {
+    .logo {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+  
+    .application::before {
+        left: 87px;
+    }
+    .jobStatusConut {
+        margin-top: -42px;
+    }
+    .cardBottom .status {
+        margin-top: 16px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+      .navbar-brand>img {
+        width: 90%;
+    }
+    .navbar-nav  {
+        margin-top: 7px;
+    }
+    .application::before {
+        left: 130px;
+    }
+    .sidebar {
+        width: 16.66666%;
+        left: 20px;
+        top: 64px;
+        min-height: 80%;
+        background: #fff;
+    }
+    .toggleMenu {
+        display: none;
+    }
+    .cardHeaderLeft {
+        width: 20%;
+    }
+    .navbar-default .navbar-collapse {
+        position: relative;
+    }
+    .navbar-default,
+    .navbar {
+        height: 51px;
+    }
+    .userSetting img {
+        margin-top: -1px;
+    }
+    .fixed3 {
+        top: 0;
+        padding-left: 28%;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .application::before {
+        left: 138px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .application::before {
+        left: 144px;
+    }
+    .fixed3 {
+        padding-left: 28%;
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .application::before {
+        left: 168px;
+    }
+    .fixed3 {
+        padding-left: 27%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .application::before {
+        left: 187px;
+    }
+    .fixed3 {
+        padding-left: 27%;
+    }
+}
