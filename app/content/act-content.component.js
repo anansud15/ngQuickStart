@@ -9,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var act_content_component_1 = require('./content/act-content.component');
-var AppComponent = (function () {
-    function AppComponent() {
+var applicant_list_component_1 = require('./applicants/applicant-list.component');
+var ActContentComponent = (function () {
+    function ActContentComponent() {
     }
-    AppComponent = __decorate([
+    ActContentComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            directives: [act_content_component_1.ActContentComponent]
+            selector: 'act-content',
+            templateUrl: 'app/content/act-content.component.html',
+            directives: [applicant_list_component_1.ApplicantCardsComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ActContentComponent);
+    return ActContentComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ActContentComponent = ActContentComponent;
+//# sourceMappingURL=act-content.component.js.map
