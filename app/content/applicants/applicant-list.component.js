@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ApplicantCardsComponent = (function () {
     function ApplicantCardsComponent() {
-        this.HEROES = [
+        this.APPLICANTS = [
             { "id": 11, "name": "Mr. Nice", "city": "Phoenix", "state": "Arizona" },
             { "id": 12, "name": "Narco", "city": "Phoenix", "state": "Arizona" },
             { "id": 13, "name": "Bombasto", "city": "Phoenix", "state": "Arizona" },

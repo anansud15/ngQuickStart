@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 })
 export class ApplicantCardsComponent {
 
-	HEROES: any[] = [
+	APPLICANTS: any[] = [
   { "id": 11, "name": "Mr. Nice", "city": "Phoenix", "state": "Arizona"},
   { "id": 12, "name": "Narco", "city": "Phoenix", "state": "Arizona" },
   { "id": 13, "name": "Bombasto", "city": "Phoenix", "state": "Arizona" },
