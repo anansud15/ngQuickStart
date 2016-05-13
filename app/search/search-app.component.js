@@ -9,19 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var applicant_list_component_1 = require('./applicants/applicant-list.component');
-var ActContentComponent = (function () {
-    function ActContentComponent() {
+var SearchAppComponent = (function () {
+    function SearchAppComponent() {
     }
-    ActContentComponent = __decorate([
+    SearchAppComponent = __decorate([
         core_1.Component({
-            selector: 'act-content',
-            templateUrl: 'app/content/act-content.component.html',
-            directives: [applicant_list_component_1.ApplicantCardsComponent]
+            selector: 'search-app',
+            template: "\n      <div class=\"filterSearch\">\n        <div class=\"right-inner-addon \">\n          <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n          <input type=\"search\" class=\"form-control\" placeholder=\"Search\" />\n        </div>\n      </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], ActContentComponent);
-    return ActContentComponent;
+    ], SearchAppComponent);
+    return SearchAppComponent;
 }());
-exports.ActContentComponent = ActContentComponent;
-//# sourceMappingURL=act-content.component.js.map
+exports.SearchAppComponent = SearchAppComponent;
+//# sourceMappingURL=search-app.component.js.map

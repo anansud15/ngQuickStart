@@ -27,7 +27,7 @@ var ApplicantCardsComponent = (function () {
     ApplicantCardsComponent = __decorate([
         core_1.Component({
             selector: 'applicant-cards',
-            templateUrl: 'app/content/applicants/applicant-list.component.html',
+            templateUrl: 'app/applicants/applicant-list.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], ApplicantCardsComponent);

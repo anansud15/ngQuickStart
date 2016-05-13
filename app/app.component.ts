@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ActContentComponent } from './content/act-content.component';
+import { ActContainerComponent } from './container/act-container.component';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    directives: [ActContentComponent]
+    directives: [ActContainerComponent]
 })
 export class AppComponent { }
