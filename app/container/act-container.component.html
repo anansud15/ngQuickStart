@@ -3,7 +3,7 @@
                 <div class="row-fluid">
                     <div class="col-lg-2 sidebar">
                         <div class="leftPanel">
-                            <search-app></search-app>
+                            <search-app (searchNotify)='onSearchFilterNotify($event)'></search-app>
                             <div class="filter">
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default">
@@ -197,7 +197,7 @@
                             </div>
                         </div>
 
-                        <applicant-cards></applicant-cards>
+                        <applicant-cards [applicants]='applicants' [listFilter]='searchFilter'></applicant-cards>
                         
                         <div class="clearfix"></div>
                         <div class="row-fluid">

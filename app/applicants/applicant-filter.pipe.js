@@ -9,27 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var SearchAppComponent = (function () {
-    function SearchAppComponent() {
-        this.searchFilter = '';
-        this.searchNotify = new core_1.EventEmitter();
+var ApplicantFilterPipe = (function () {
+    function ApplicantFilterPipe() {
     }
-    SearchAppComponent.prototype.emitSearchFilter = function () {
-        this.searchNotify.emit(this.searchFilter);
-        console.log("onclick .. onsearchnotify .. ");
+    ApplicantFilterPipe.prototype.transform = function (value, filter) {
+        filter = filter ? filter.toLocaleLowerCase() : null;
+        return filter ? value.filter(function (applicant) {
+            return applicant.name.toLocaleLowerCase().indexOf(filter) !== -1;
+        }) : value;
     };
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', core_1.EventEmitter)
-    ], SearchAppComponent.prototype, "searchNotify", void 0);
-    SearchAppComponent = __decorate([
-        core_1.Component({
-            selector: 'search-app',
-            templateUrl: 'app/search/search-app.component.html',
+    ApplicantFilterPipe = __decorate([
+        core_1.Pipe({
+            name: 'applicantFilter'
         }), 
         __metadata('design:paramtypes', [])
-    ], SearchAppComponent);
-    return SearchAppComponent;
+    ], ApplicantFilterPipe);
+    return ApplicantFilterPipe;
 }());
-exports.SearchAppComponent = SearchAppComponent;
-//# sourceMappingURL=search-app.component.js.map
+exports.ApplicantFilterPipe = ApplicantFilterPipe;
+//# sourceMappingURL=applicant-filter.pipe.js.map

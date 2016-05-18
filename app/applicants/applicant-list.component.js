@@ -9,25 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var applicant_filter_pipe_1 = require('./applicant-filter.pipe');
 var ApplicantCardsComponent = (function () {
     function ApplicantCardsComponent() {
-        this.APPLICANTS = [
-            { "id": "00011", "name": "Mr. Nice", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00012", "name": "Narco", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00013", "name": "Bombasto", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00014", "name": "Celeritas", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00015", "name": "Magneta", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00016", "name": "RubberMan", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00017", "name": "Dynama", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00018", "name": "Dr IQ", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00019", "name": "Magma", "city": "Phoenix", "state": "Arizona" },
-            { "id": "00020", "name": "Tornado", "city": "Phoenix", "state": "Arizona" }
-        ];
+        this.listFilter = '';
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], ApplicantCardsComponent.prototype, "applicants", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], ApplicantCardsComponent.prototype, "listFilter", void 0);
     ApplicantCardsComponent = __decorate([
         core_1.Component({
             selector: 'applicant-cards',
             templateUrl: 'app/applicants/applicant-list.component.html',
+            pipes: [applicant_filter_pipe_1.ApplicantFilterPipe]
         }), 
         __metadata('design:paramtypes', [])
     ], ApplicantCardsComponent);

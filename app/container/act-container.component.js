@@ -13,7 +13,23 @@ var applicant_list_component_1 = require('../applicants/applicant-list.component
 var search_app_component_1 = require('../search/search-app.component');
 var ActContainerComponent = (function () {
     function ActContainerComponent() {
+        this.applicants = [
+            { "id": "00011", "name": "Mr. Nice", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00012", "name": "Narco", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00013", "name": "Bombasto", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00014", "name": "Celeritas", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00015", "name": "Magneta", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00016", "name": "RubberMan", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00017", "name": "Dynama", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00018", "name": "Dr IQ", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00019", "name": "Magma", "city": "Phoenix", "state": "Arizona" },
+            { "id": "00020", "name": "Tornado", "city": "Phoenix", "state": "Arizona" }
+        ];
+        this.searchFilter = '';
     }
+    ActContainerComponent.prototype.onSearchFilterNotify = function (searchString) {
+        this.searchFilter = searchString;
+    };
     ActContainerComponent = __decorate([
         core_1.Component({
             selector: 'act-container',
