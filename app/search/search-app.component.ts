@@ -13,11 +13,11 @@ import {Component, Output, EventEmitter} from '@angular/core';
     `*/
 })
 export class SearchAppComponent {
-	searchFilter: string = '';
-	@Output() searchNotify: EventEmitter<string> = new EventEmitter<string>();
+	nameFilter: string = '';
+	@Output() nameFilterNotify: EventEmitter<string> = new EventEmitter<string>();
 
-	emitSearchFilter() {
-		this.searchNotify.emit(this.searchFilter);
+	emitNameFilter() {
+		this.nameFilterNotify.emit(this.nameFilter);
 		console.log("onclick .. onsearchnotify .. ");
 
 	}

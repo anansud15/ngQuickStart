@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var applicant_filter_pipe_1 = require('./applicant-filter.pipe');
 var ApplicantCardsComponent = (function () {
     function ApplicantCardsComponent() {
-        this.listFilter = '';
+        this.nameFilter = '';
     }
     __decorate([
         core_1.Input(), 
@@ -21,7 +21,7 @@ var ApplicantCardsComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], ApplicantCardsComponent.prototype, "listFilter", void 0);
+    ], ApplicantCardsComponent.prototype, "nameFilter", void 0);
     ApplicantCardsComponent = __decorate([
         core_1.Component({
             selector: 'applicant-cards',

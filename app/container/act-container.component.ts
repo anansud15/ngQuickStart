@@ -21,9 +21,9 @@ export class ActContainerComponent {
         { "id": "00020", "name": "Tornado", "city": "Phoenix", "state": "Arizona" }
     ];
 
-    searchFilter: string = '';
+    nameFilter: string = '';
 
-    onSearchFilterNotify(searchString: string): void{
-        this.searchFilter = searchString;
+    onNameFilterNotify(nameString: string): void{
+        this.nameFilter = nameString;
     }
 }

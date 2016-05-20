@@ -8,7 +8,7 @@ import {ApplicantFilterPipe} from './applicant-filter.pipe';
 export class ApplicantCardsComponent {
 
     @Input() applicants: any[];
-    @Input() listFilter: string = '';
+    @Input() nameFilter: string = '';
 
 
 }

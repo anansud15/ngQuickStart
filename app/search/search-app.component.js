@@ -11,17 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var SearchAppComponent = (function () {
     function SearchAppComponent() {
-        this.searchFilter = '';
-        this.searchNotify = new core_1.EventEmitter();
+        this.nameFilter = '';
+        this.nameFilterNotify = new core_1.EventEmitter();
     }
-    SearchAppComponent.prototype.emitSearchFilter = function () {
-        this.searchNotify.emit(this.searchFilter);
+    SearchAppComponent.prototype.emitNameFilter = function () {
+        this.nameFilterNotify.emit(this.nameFilter);
         console.log("onclick .. onsearchnotify .. ");
     };
     __decorate([
         core_1.Output(), 
         __metadata('design:type', core_1.EventEmitter)
-    ], SearchAppComponent.prototype, "searchNotify", void 0);
+    ], SearchAppComponent.prototype, "nameFilterNotify", void 0);
     SearchAppComponent = __decorate([
         core_1.Component({
             selector: 'search-app',

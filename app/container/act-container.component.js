@@ -25,10 +25,10 @@ var ActContainerComponent = (function () {
             { "id": "00019", "name": "Magma", "city": "Phoenix", "state": "Arizona" },
             { "id": "00020", "name": "Tornado", "city": "Phoenix", "state": "Arizona" }
         ];
-        this.searchFilter = '';
+        this.nameFilter = '';
     }
-    ActContainerComponent.prototype.onSearchFilterNotify = function (searchString) {
-        this.searchFilter = searchString;
+    ActContainerComponent.prototype.onNameFilterNotify = function (nameString) {
+        this.nameFilter = nameString;
     };
     ActContainerComponent = __decorate([
         core_1.Component({
