@@ -17,7 +17,8 @@ export class ApplicantCardsComponent implements OnInit{
     }
 
     ngOnInit(): void {
-    	this.applicants = this._applicantService.getApplicants();
+    	this._applicantService.getApplicants()
+            .subscribe(applicants => this.applicants = applicants);
     }
 
 }

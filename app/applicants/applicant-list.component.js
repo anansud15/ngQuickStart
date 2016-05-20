@@ -17,7 +17,9 @@ var ApplicantCardsComponent = (function () {
         this.nameFilter = '';
     }
     ApplicantCardsComponent.prototype.ngOnInit = function () {
-        this.applicants = this._applicantService.getApplicants();
+        var _this = this;
+        this._applicantService.getApplicants()
+            .subscribe(function (applicants) { return _this.applicants = applicants; });
     };
     __decorate([
         core_1.Input(), 

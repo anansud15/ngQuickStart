@@ -10,7 +10,7 @@ import { ApplicantService } from '../common/applicant.service'
     selector: 'act-container',
     templateUrl: 'app/container/act-container.component.html',
     directives: [ApplicantCardsComponent, SearchAppComponent],
-    providers: [ApplicantService]
+    providers: [ApplicantService, HTTP_PROVIDERS]
 })
 export class ActContainerComponent { 
 

@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 require('rxjs/Rx'); // load all features
 var applicant_list_component_1 = require('../applicants/applicant-list.component');
 var search_app_component_1 = require('../search/search-app.component');
@@ -25,7 +26,7 @@ var ActContainerComponent = (function () {
             selector: 'act-container',
             templateUrl: 'app/container/act-container.component.html',
             directives: [applicant_list_component_1.ApplicantCardsComponent, search_app_component_1.SearchAppComponent],
-            providers: [applicant_service_1.ApplicantService]
+            providers: [applicant_service_1.ApplicantService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], ActContainerComponent);
