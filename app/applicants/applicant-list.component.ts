@@ -1,14 +1,23 @@
-import {Component, Input, OnChanges} from '@angular/core';
-import {ApplicantFilterPipe} from './applicant-filter.pipe';
+import { Component, Input, OnInit } from '@angular/core';
+import { ApplicantFilterPipe } from './applicant-filter.pipe';
+import { ApplicantService } from '../common/applicant.service';
+import { IApplicant } from './applicant';
+
 @Component({
     selector: 'applicant-cards',
     templateUrl: 'app/applicants/applicant-list.component.html',
     pipes: [ApplicantFilterPipe]
 })
-export class ApplicantCardsComponent {
+export class ApplicantCardsComponent implements OnInit{
 
-    @Input() applicants: any[];
+    applicants: IApplicant[];
     @Input() nameFilter: string = '';
 
+    constructor(private _applicantService: ApplicantService) { 	
+    }
+
+    ngOnInit(): void {
+    	this.applicants = this._applicantService.getApplicants();
+    }
 
 }

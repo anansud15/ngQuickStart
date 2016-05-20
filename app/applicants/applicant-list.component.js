@@ -10,14 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var applicant_filter_pipe_1 = require('./applicant-filter.pipe');
+var applicant_service_1 = require('../common/applicant.service');
 var ApplicantCardsComponent = (function () {
-    function ApplicantCardsComponent() {
+    function ApplicantCardsComponent(_applicantService) {
+        this._applicantService = _applicantService;
         this.nameFilter = '';
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Array)
-    ], ApplicantCardsComponent.prototype, "applicants", void 0);
+    ApplicantCardsComponent.prototype.ngOnInit = function () {
+        this.applicants = this._applicantService.getApplicants();
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
@@ -28,7 +29,7 @@ var ApplicantCardsComponent = (function () {
             templateUrl: 'app/applicants/applicant-list.component.html',
             pipes: [applicant_filter_pipe_1.ApplicantFilterPipe]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [applicant_service_1.ApplicantService])
     ], ApplicantCardsComponent);
     return ApplicantCardsComponent;
 }());
