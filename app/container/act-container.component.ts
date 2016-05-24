@@ -4,12 +4,18 @@ import 'rxjs/Rx'; // load all features
 
 import { ApplicantCardsComponent } from '../applicants/applicant-list.component';
 import { SearchAppComponent } from '../search/search-app.component';
-import { ApplicantService } from '../common/applicant.service'
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
+import { FilterComponent } from '../filter/filter.component';
+import { TagsComponent } from '../tags/tags.component';
+import { ApplicantService } from '../common/applicant.service';
+
 
 @Component({
     selector: 'act-container',
     templateUrl: 'app/container/act-container.component.html',
-    directives: [ApplicantCardsComponent, SearchAppComponent],
+    directives: [ApplicantCardsComponent, SearchAppComponent,
+     	HeaderComponent, FooterComponent, FilterComponent, TagsComponent],
     providers: [ApplicantService, HTTP_PROVIDERS]
 })
 export class ActContainerComponent { 

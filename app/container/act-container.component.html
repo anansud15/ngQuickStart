@@ -1,3 +1,7 @@
+     <div id="wrapper">
+               
+        <act-header></act-header>>
+
         <div id="content">
             <div class="container-fluid" style="min-height: 100%">
                 <div class="row-fluid">
@@ -5,51 +9,7 @@
                         <div class="leftPanel">
                             <search-app (nameFilterNotify)='onNameFilterNotify($event)'></search-app>
                             <div class="filter">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#locationFilter" aria-expanded="true" aria-controls="collapseOne">
-                                          Location 
-                                          <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
-                                        </a>
-                                        
-                                      </h4>
-                                        </div>
-                                        <div id="locationFilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <div class="locationFilter">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> California
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Georgia
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Florida
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Texas
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Hawaii
-                                                        </label>
-                                                    </div>
-                                                    <a href="" class="more"><i class="fa fa-plus" aria-hidden="true"></i> More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <act-filter></act-filter>
                                 <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
@@ -181,28 +141,14 @@
                             <a href="" id="menu-toggle"> <i class="fa fa-filter" aria-hidden="true"></i></a>
                         </div>
                     <div class="col-lg-10 col-lg-offset-2 col-xs-12 contantArea">
-                        <div class="row-fluid">
-                            <div class="col-lg-12 col-xs-12">
-                                <div class="tags-view">
-                                    <ul>
-                                        <li>Store Incharge <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a></li>
-                                        <li>Full-Time <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a></li>
-                                        <li>Georgia <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                    <div class="pull-right viewChanger">
-                                        <a href="" class="active"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>
-                                        <a href=""><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <act-tags></act-tags>
 
                         <applicant-cards [nameFilter]='nameFilter'></applicant-cards>
                         
                         <div class="clearfix"></div>
                         <div class="row-fluid">
                             <div class="contentLoader">
-                                <img src="images/loader.gif" alt="">
+                                <img src="app/assets/images/loader.gif" alt="">
                             </div>
                         </div>
 
@@ -210,3 +156,6 @@
                 </div>
             </div>
         </div>
+
+        <act-footer></act-footer>>
+    </div>

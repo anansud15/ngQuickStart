@@ -13,6 +13,10 @@ var http_1 = require('@angular/http');
 require('rxjs/Rx'); // load all features
 var applicant_list_component_1 = require('../applicants/applicant-list.component');
 var search_app_component_1 = require('../search/search-app.component');
+var header_component_1 = require('../header/header.component');
+var footer_component_1 = require('../footer/footer.component');
+var filter_component_1 = require('../filter/filter.component');
+var tags_component_1 = require('../tags/tags.component');
 var applicant_service_1 = require('../common/applicant.service');
 var ActContainerComponent = (function () {
     function ActContainerComponent() {
@@ -25,7 +29,8 @@ var ActContainerComponent = (function () {
         core_1.Component({
             selector: 'act-container',
             templateUrl: 'app/container/act-container.component.html',
-            directives: [applicant_list_component_1.ApplicantCardsComponent, search_app_component_1.SearchAppComponent],
+            directives: [applicant_list_component_1.ApplicantCardsComponent, search_app_component_1.SearchAppComponent,
+                header_component_1.HeaderComponent, footer_component_1.FooterComponent, filter_component_1.FilterComponent, tags_component_1.TagsComponent],
             providers: [applicant_service_1.ApplicantService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
