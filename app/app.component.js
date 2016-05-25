@@ -9,17 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var act_container_component_1 = require('./container/act-container.component');
+var login_component_1 = require('./login/login.component');
+var applicant_detail_component_1 = require('./applicants/applicant-detail.component');
+var http_1 = require('@angular/http');
+require('rxjs/Rx'); // load all features
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(_router) {
+        this._router = _router;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this._router.navigate(['/login']);
+    };
     AppComponent = __decorate([
+        // load all features
         core_1.Component({
-            selector: 'my-app',
+            selector: 'app',
             templateUrl: 'app/app.component.html',
-            directives: [act_container_component_1.ActContainerComponent]
-        }), 
-        __metadata('design:paramtypes', [])
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS]
+        }),
+        router_1.Routes([
+            { path: '/login', component: login_component_1.LoginComponent },
+            { path: '/applicants', component: act_container_component_1.ActContainerComponent },
+            { path: '/applicant/:id', component: applicant_detail_component_1.ApplicantDetailComponent },
+            { path: '*', component: login_component_1.LoginComponent }
+        ]), 
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());

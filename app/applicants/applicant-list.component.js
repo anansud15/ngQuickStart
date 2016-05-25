@@ -11,12 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var applicant_filter_pipe_1 = require('./applicant-filter.pipe');
 var applicant_service_1 = require('../common/applicant.service');
-var ApplicantCardsComponent = (function () {
-    function ApplicantCardsComponent(_applicantService) {
+var ApplicantListComponent = (function () {
+    function ApplicantListComponent(_applicantService) {
         this._applicantService = _applicantService;
         this.nameFilter = '';
     }
-    ApplicantCardsComponent.prototype.ngOnInit = function () {
+    ApplicantListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._applicantService.getApplicants()
             .subscribe(function (applicants) { return _this.applicants = applicants; });
@@ -24,16 +24,16 @@ var ApplicantCardsComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], ApplicantCardsComponent.prototype, "nameFilter", void 0);
-    ApplicantCardsComponent = __decorate([
+    ], ApplicantListComponent.prototype, "nameFilter", void 0);
+    ApplicantListComponent = __decorate([
         core_1.Component({
             selector: 'applicant-cards',
             templateUrl: 'app/applicants/applicant-list.component.html',
             pipes: [applicant_filter_pipe_1.ApplicantFilterPipe]
         }), 
         __metadata('design:paramtypes', [applicant_service_1.ApplicantService])
-    ], ApplicantCardsComponent);
-    return ApplicantCardsComponent;
+    ], ApplicantListComponent);
+    return ApplicantListComponent;
 }());
-exports.ApplicantCardsComponent = ApplicantCardsComponent;
+exports.ApplicantListComponent = ApplicantListComponent;
 //# sourceMappingURL=applicant-list.component.js.map

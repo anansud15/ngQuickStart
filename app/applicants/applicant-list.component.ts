@@ -8,7 +8,7 @@ import { IApplicant } from './applicant';
     templateUrl: 'app/applicants/applicant-list.component.html',
     pipes: [ApplicantFilterPipe]
 })
-export class ApplicantCardsComponent implements OnInit{
+export class ApplicantListComponent implements OnInit{
 
     applicants: IApplicant[];
     @Input() nameFilter: string = '';
