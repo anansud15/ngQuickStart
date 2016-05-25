@@ -13,6 +13,7 @@ var router_1 = require('@angular/router');
 var act_container_component_1 = require('./container/act-container.component');
 var login_component_1 = require('./login/login.component');
 var applicant_detail_component_1 = require('./applicants/applicant-detail.component');
+var login_service_1 = require('./login/login.service');
 var http_1 = require('@angular/http');
 require('rxjs/Rx'); // load all features
 var AppComponent = (function () {
@@ -28,7 +29,7 @@ var AppComponent = (function () {
             selector: 'app',
             templateUrl: 'app/app.component.html',
             directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS]
+            providers: [http_1.HTTP_PROVIDERS, router_1.ROUTER_PROVIDERS, login_service_1.LoginService]
         }),
         router_1.Routes([
             { path: '/login', component: login_component_1.LoginComponent },

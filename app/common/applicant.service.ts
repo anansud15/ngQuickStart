@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { IApplicant } from '../applicants/applicant';
 
@@ -12,6 +12,13 @@ export class ApplicantService {
 
 	}
 	getApplicants(): Observable<IApplicant[]> {
+
+		let headers = new Headers();
+	    headers.append('Authorization', 'Basic QmFsYWppOkJhbGFqaTEyMw=='); 
+		let options = new RequestOptions({ headers: headers });
+
+		headers.append('Authorization', 'Bearer '+localStorage.getItem("auth_token"));
+
 
 		return this._http.get(this._applicantUrl)
 			.map((response: Response) => <IApplicant[]>response.json())

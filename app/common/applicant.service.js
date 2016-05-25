@@ -17,6 +17,10 @@ var ApplicantService = (function () {
         this._applicantUrl = 'api/applicants/applicants.json';
     }
     ApplicantService.prototype.getApplicants = function () {
+        var headers = new http_1.Headers();
+        headers.append('Authorization', 'Basic QmFsYWppOkJhbGFqaTEyMw==');
+        var options = new http_1.RequestOptions({ headers: headers });
+        headers.append('Authorization', 'Bearer ' + localStorage.getItem("auth_token"));
         return this._http.get(this._applicantUrl)
             .map(function (response) { return response.json(); })
             .do(function (data) { return console.log("All: " + JSON.stringify(data)); })

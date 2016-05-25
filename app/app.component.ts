@@ -5,6 +5,7 @@ import { ActContainerComponent } from './container/act-container.component';
 import { LoginComponent } from './login/login.component';
 import { ApplicantListComponent } from './applicants/applicant-list.component';
 import { ApplicantDetailComponent } from './applicants/applicant-detail.component';
+import { LoginService } from './login/login.service';
 
 import { HTTP_PROVIDERS } from '@angular/http';
 import 'rxjs/Rx'; // load all features
@@ -13,7 +14,7 @@ import 'rxjs/Rx'; // load all features
     selector: 'app',
     templateUrl: 'app/app.component.html',
     directives: [ROUTER_DIRECTIVES],
-    providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS]
+    providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS, LoginService]
 })
 @Routes([
   {path: '/login', component: LoginComponent},
