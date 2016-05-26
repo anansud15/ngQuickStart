@@ -1,0 +1,4 @@
+{
+	"location": [{"id": "4545", "location": "California"}, {"id": "55451", "location": "Georgia"}, {"id": "55452", "location": "Florida"}, {"id":"55453", "location": "Texas"}, {"id": "55455", "location":"Hawaii"}],
+	"jobTitle": [{"id": "435431", "jobTitle": "Store Incharge"}, {"id": "435432", "jobTitle": "Supervisor"}, {"id": "435433", "jobTitle": "Sales Executive"} {"id": "435434", "jobTitle": "Cashier"} {"id": "435435", "jobTitle": "Accountant"}]
+}
