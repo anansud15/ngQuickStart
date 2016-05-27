@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { IApplicant } from '../applicants/applicant';
+import { ILocation } from '../common/location';
 
 @Injectable()
-export class ApplicantService {
+export class FilterDataProviderService {
 
-	private _applicantUrl = 'api/applicants/applicants.json';
+	private _url = 'api/applicants/filterData.json';
 
 	constructor(private _http: Http) {
 
 	}
-	getApplicants(): Observable<IApplicant[]> {
+	getFilters(): Observable<ILocation[]> {
 
 		let headers = new Headers();
 	    headers.append('Authorization', 'Basic QmFsYWppOkJhbGFqaTEyMw=='); 
 		let options = new RequestOptions({ headers: headers });
 
-		headers.append('Authorization', 'Bearer '+localStorage.getItem("auth_token"));
+		headers.append('Authorization', 'Bearer '+ localStorage.getItem("auth_token"));
 
 
-		return this._http.get(this._applicantUrl)
-			.map((response: Response) => <IApplicant[]>response.json())
+		return this._http.get(this._url)
+			.map((response: Response) => <ILocation[]>response.json())
 			.do(data => console.log("All: " + JSON.stringify(data)))
 			.catch(this.handleError);
 

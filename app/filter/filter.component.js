@@ -13,7 +13,25 @@ var FilterComponent = (function () {
     function FilterComponent() {
         this.filterTitle = 'location';
         this.filterClass = 'locationFilter';
+        this.filterChangeEvent = new core_1.EventEmitter();
     }
+    FilterComponent.prototype.emitFilterChangeEvent = function (filter) {
+        //[(ngModel)]="filter.selected"
+        filter.selected = !filter.selected;
+        this.filterChangeEvent.emit(filter);
+        console.log("Location Filter .. onsearchnotify .. ");
+        for (var i = 0; i < this.filters.length; i++) {
+            console.log(this.filters[i].location, this.filters[i].selected);
+        }
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], FilterComponent.prototype, "filters", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], FilterComponent.prototype, "filterChangeEvent", void 0);
     FilterComponent = __decorate([
         core_1.Component({
             selector: 'act-filter',

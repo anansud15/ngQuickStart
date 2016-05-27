@@ -2,9 +2,11 @@
                             <div class="col-lg-12 col-xs-12">
                                 <div class="tags-view">
                                     <ul>
-                                        <li>Store Incharge <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a></li>
-                                        <li>Full-Time <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a></li>
-                                        <li>Georgia <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                                        <li *ngFor="let tag of tags">
+                                            tag.location <a href="javascript:void(0)" (click)='deleteClick(tag)'>
+                                            <i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </li>
+                                        
                                     </ul>
                                     <div class="pull-right viewChanger">
                                         <a href="" class="active"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>

@@ -7,18 +7,22 @@
                 <div class="row-fluid">
                     <div class="col-lg-2 sidebar">
                         <div class="leftPanel">
+                            
                             <search-app (nameFilterNotify)='onNameFilterNotify($event)'></search-app>
+                            
                             <div class="filter">
-                                <act-filter></act-filter>
+                                
+                                <act-filter [filters]='filters' (filterChangeEvent)='filterChangeEvent($event)'></act-filter>
+                                
                                 <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#titleFilter" aria-expanded="false" aria-controls="collapseTwo">
-                                  JOB TITLE <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
-                                </a>
-                                 
-                              </h4>
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#titleFilter" aria-expanded="false" aria-controls="collapseTwo">
+                                                  JOB TITLE <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                                                </a>
+                                                 
+                                            </h4>
                                         </div>
                                         <div id="titleFilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                                             <div class="panel-body">
@@ -141,7 +145,7 @@
                             <a href="" id="menu-toggle"> <i class="fa fa-filter" aria-hidden="true"></i></a>
                         </div>
                     <div class="col-lg-10 col-lg-offset-2 col-xs-12 contantArea">
-                        <act-tags></act-tags>
+                        <act-tags [filterEvent]='filterEvent'></act-tags>
 
                         <applicant-cards [nameFilter]='nameFilter'></applicant-cards>
                         

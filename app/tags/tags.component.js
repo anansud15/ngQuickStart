@@ -11,7 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var TagsComponent = (function () {
     function TagsComponent() {
+        this.previousFilterEvent = this.filterEvent;
     }
+    // ngOnChanges(): void {
+    //     this.tags.push(this.filterEvent);
+    // }
+    // We "know" that the only way the list can change is
+    // identity or in length so that's all we check
+    TagsComponent.prototype.ngDoCheck = function () {
+        console.log('ngDoCheck() in tag.component');
+        if (this.previousFilterEvent !== this.filterEvent) {
+            this.tags['tags.length'] = this.filterEvent;
+            this.previousFilterEvent = this.filterEvent;
+        }
+    };
+    __decorate([
+        //implements OnChanges {
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], TagsComponent.prototype, "filterEvent", void 0);
     TagsComponent = __decorate([
         core_1.Component({
             selector: 'act-tags',

@@ -1,4 +1,4 @@
-export interface IJobTitleFilter {
+export interface IJobTitle {
 	 id: string;
 	 jobTitle: string;
 } 

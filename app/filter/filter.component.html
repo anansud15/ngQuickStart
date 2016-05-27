@@ -2,40 +2,20 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
                                             <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#locationFilter" aria-expanded="true" aria-controls="collapseOne">
-                                          {{filterTitle}} 
-                                          <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
-                                        </a>
-                                        
-                                      </h4>
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#locationFilter" aria-expanded="true" aria-controls="collapseOne">
+                                                  {{filterTitle}} 
+                                                  <i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                                                </a>
+                                                
+                                            </h4>
                                         </div>
                                         <div id="locationFilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                             <div class="panel-body">
                                                 <div class="locationFilter">
 
-                                                    <div class="checkbox">
+                                                    <div *ngFor="let filter of filters" class="checkbox">
                                                         <label>
-                                                            <input type="checkbox"> California
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Georgia
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Florida
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Texas
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Hawaii
+                                                            <input type="checkbox" (change)="emitFilterChangeEvent(filter)"> {{filter.location}}
                                                         </label>
                                                     </div>
                                                     <a href="" class="more"><i class="fa fa-plus" aria-hidden="true"></i> More</a>

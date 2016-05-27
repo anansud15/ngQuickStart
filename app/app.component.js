@@ -21,7 +21,7 @@ var AppComponent = (function () {
         this._router = _router;
     }
     AppComponent.prototype.ngOnInit = function () {
-        this._router.navigate(['/login']);
+        this._router.navigate(['/applicants']);
     };
     AppComponent = __decorate([
         // load all features

@@ -16,12 +16,22 @@ var footer_component_1 = require('../footer/footer.component');
 var filter_component_1 = require('../filter/filter.component');
 var tags_component_1 = require('../tags/tags.component');
 var applicant_service_1 = require('../common/applicant.service');
+var filter_data_service_1 = require('../common/filter-data.service');
 var ActContainerComponent = (function () {
-    function ActContainerComponent() {
+    function ActContainerComponent(_filterDataProviderService) {
+        this._filterDataProviderService = _filterDataProviderService;
         this.nameFilter = '';
     }
+    ActContainerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._filterDataProviderService.getFilters()
+            .subscribe(function (filters) { return _this.filters = filters; });
+    };
     ActContainerComponent.prototype.onNameFilterNotify = function (nameString) {
         this.nameFilter = nameString;
+    };
+    ActContainerComponent.prototype.filterChangeEvent = function (filter) {
+        this.filterEvent = filter;
     };
     ActContainerComponent = __decorate([
         core_1.Component({
@@ -29,9 +39,9 @@ var ActContainerComponent = (function () {
             templateUrl: 'app/container/act-container.component.html',
             directives: [applicant_list_component_1.ApplicantListComponent, search_app_component_1.SearchAppComponent,
                 header_component_1.HeaderComponent, footer_component_1.FooterComponent, filter_component_1.FilterComponent, tags_component_1.TagsComponent],
-            providers: [applicant_service_1.ApplicantService]
+            providers: [applicant_service_1.ApplicantService, filter_data_service_1.FilterDataProviderService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [filter_data_service_1.FilterDataProviderService])
     ], ActContainerComponent);
     return ActContainerComponent;
 }());

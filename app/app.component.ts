@@ -17,10 +17,10 @@ import 'rxjs/Rx'; // load all features
     providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS, LoginService]
 })
 @Routes([
-  {path: '/login', component: LoginComponent},
-  {path: '/applicants', component: ActContainerComponent},
-  {path: '/applicant/:id', component: ApplicantDetailComponent},
-  {path: '*', component: LoginComponent}
+    {path: '/login', component: LoginComponent},
+    {path: '/applicants', component: ActContainerComponent},
+    {path: '/applicant/:id', component: ApplicantDetailComponent},
+    {path: '*', component: LoginComponent}
 ])
 export class AppComponent implements OnInit { 
 	constructor(private _router: Router) {
@@ -28,6 +28,6 @@ export class AppComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this._router.navigate(['/login']);
+		this._router.navigate(['/applicants']);
 	}
 }
